@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Exercicios de criacao de métodos
         //Exercício da Caluladora
         System.out.println("---CALCULADORA---");
         System.out.println("soma = " + Calculadora.soma(10,10));
@@ -21,6 +22,15 @@ public class Main {
         System.out.println(" ");
         System.out.println("---Emprestimo---");
         System.out.println("Valor total a ser pago posteriormente = " + Emprestimo.geraValor(15000, 2));
+
+        //Exercicio de Sobrecarga de métodos
+        System.out.println(" ");
+        System.out.println("---Calculo Áreas---");
+        CalculaAreaPoligonos.calcularArea(4);
+        CalculaAreaPoligonos.calcularArea(4,5);
+        CalculaAreaPoligonos.calcularArea(5,10,4);
+
+
 
     }
 }
