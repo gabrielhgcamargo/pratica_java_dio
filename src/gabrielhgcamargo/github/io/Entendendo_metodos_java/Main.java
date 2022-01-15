@@ -26,11 +26,9 @@ public class Main {
         //Exercicio de Sobrecarga de métodos
         System.out.println(" ");
         System.out.println("---Calculo Áreas---");
-        CalculaAreaPoligonos.calcularArea(4);
-        CalculaAreaPoligonos.calcularArea(4,5);
-        CalculaAreaPoligonos.calcularArea(5,10,4);
-
-
+        System.out.println(CalculaAreaPoligonos.calcularArea(4));
+        System.out.println(CalculaAreaPoligonos.calcularArea(4f,5f));
+        System.out.println(CalculaAreaPoligonos.calcularArea(5f,10f,4f));
 
     }
 }
