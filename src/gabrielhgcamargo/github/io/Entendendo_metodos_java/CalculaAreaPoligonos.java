@@ -1,5 +1,6 @@
 package gabrielhgcamargo.github.io.Entendendo_metodos_java;
 
+// Classe com os métodos de sobrecarga, que calcula a area do poligono conforme os parametros recebidos
 public class CalculaAreaPoligonos {
 
     public static void calcularArea(Integer lado){
