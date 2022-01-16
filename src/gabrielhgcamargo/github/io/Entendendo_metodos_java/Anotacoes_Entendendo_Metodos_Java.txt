@@ -1,0 +1,88 @@
+Entendendo Métodos Java
+
+
+Percurso de um método
+
+1 - Criação
+2 - Sobrecarga
+3 - Retorno
+
+O que é um método?
+
+É uma porção de código (sub-rotina) que é disponibilizada por uma classe.
+Este é executado quando é feita uma requisição a ele.
+São responsáveis por definir e realizar um determinado comportamento.
+
+
+
+Como definir e utilizar métodos?
+
+Padrão de definição:
+
+<?visibilidade?> <?tipo?> <?modificador?> retorno nome (<?parâmetros?>) <?exceções?> corpo
+
+O que se encontra entre '?' é opcional
+
+visibilidade : "public", "protected" ou "private"
+tipo : concreto ou abstrato
+modificador : "static" ou "final"
+retorno : tipo de dado que retornará ou void
+nome : nome fornecido ao método
+parâmetros : parâmetros que receberá
+exceções : exceções que pode lançar 
+corpo : código que possui, ou vazio
+
+
+
+BOAS PRÁTICAS NA CRIAÇÃO e USO
+
+- Nomes devem ser descritivos, mas curtos
+- Notação Camelo => verificarSaldo(); // executarTransferencia();
+- Deve possuir entre 80 e 120 linhas
+- Evite lista de parâmetros longas
+- Visibilidades adequadas
+
+
+Exercicios realizados, Estão no Git.
+
+
+---------------------------------------------------
+
+Sobrecarga de um método
+
+É a capacidade de definir métodos para diferentes contextos, 
+mas preservando seu nome.
+
+O que os difere é o conteúdo dentro deles contendo o código do que ele faz;
+E principalmente os parâmetros, que é o fator que os realmente difere.
+
+
+Exercicios realizados, Estão no Git.
+
+
+---------------------------------------------------
+
+
+Retorno de um método
+
+O método executa seu retorno ou finaliza quando:
+
+- Completa todas suas instruções internas 
+- Chega a uma declaração explicita de retorno (return)
+- Lança uma exceção
+
+Considerações
+
+- O tipo de retorno do método é definido na sua criação e pode ser um tipo primitivo ou objeto;
+- O tipo de dado do return deve ser compatível com o do método;
+- Se o método for sem retorno (void), não pode ter um "return" para encerrar sua execução.
+
+Exercicios realizados, Estão no Git.
+
+
+
+
+
+
+
+
