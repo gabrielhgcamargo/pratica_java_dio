@@ -1,0 +1,98 @@
+Lógica Condicional e Controle de Fluxos em Java
+-------------------------------------------------
+
+Operadores Relacionais
+
+O que são?
+
+São símbolos especiais quais são capazes de realizar
+comparações entre determinados operandos e em, seguida,
+retornar um resultado.
+
+Tipos:
+
+- Similidaridade: igual, diferente
+- Tamanho: maior, maior igual, menor, menor igual.
+
+Utilização: 
+
+Similaridade
+	
+	- Igualdade: Determina se um operando é igual ao outro. --> Simbologia: ==
+	- Diferença: Determina se um operando não é igual ao outro. --> Simbologia: !=
+---
+
+Tamanho
+
+	- Maior: Determina se um operando é maior que o outro. --> Simbologia: 	>
+	- Maior Igual: Determina se um operando é maior ou igual a outro. --> Simbologia: >=
+	- Menor: Determina se um operando é menor que o outro. --> Simbologia: <
+	- Menor Igual: Determina se um operando é menor ou igual o outro. --> Simbologia: <=
+
+
+-------------------------------------------------
+
+Operadores Lógicos
+
+O que são?
+
+São símbolos especiais que são capazes de realizar 
+comparações lógicas entre operandos lógicos ou
+expressões e, em seguida, retornar um resultado.
+
+Tipos:
+
+- Conjunção -> operação lógica que só é verdadeira quando ambos os operandos ou expressões envolvidas são verdade. 
+  Simbologia: &&
+
+- Disjunção -> operação que só é falsa quando ambos os operandos ou expressões envolvidas são falsos.
+  Simbologia: ||
+
+- Disjunção exclusiva -> operação que só é verdade quando ambos os operandos ou expressões são OPOSTOS. 
+  Simbologia: ^
+
+- Negação -> operação que INVERTE o valor lógico de um operando ou expressão.
+  Simbologia: !
+
+-------------------------------------------------
+
+Estrutura de controle de fluxo
+
+O que é?
+
+São estruturas que tem a capacidade de direcionar o fluxo de execução do código.
+
+Tipos:
+
+- Decisão: if, if else, if-else-if, switch e operador ternário.
+  Estrutura que avalia uma condição boolena ou variável para direcionar o fluxo de execução.
+
+- Repetição: for, while e do while.
+
+- Interrupção: break, continue e return.
+
+-----
+
+Boas Práticas
+
+- Switch é para valores exatos e if para expressões booleanas
+- Evitar o usar o default do switch para "cases genéricos", 
+  ou seja, devemos utilizar o default do switch para indicar que o valor passado é inválido.
+- Evitar o efeito "flecha" dos if's
+- Evitar muitos if's aninhados
+
+Exercícios no Git.
+
+-------------------------------------------------
+
+Blocos
+
+O que são Blocos?
+
+É um grupo de 0 ou mais códigos quais trabalham em conjunto para executar uma operação.
+
+Tipos:
+
+- Locais: dentro de métodos
+- Estáticos: dentro de classes
+- Instância: dentro de classes
