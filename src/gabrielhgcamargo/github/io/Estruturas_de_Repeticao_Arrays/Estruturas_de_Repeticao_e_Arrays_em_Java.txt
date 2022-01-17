@@ -1,0 +1,27 @@
+Estruturas de Repetição e Arrays em Java
+
+1 - Estruturas de repetição
+	- while -> Repetição com teste no início 
+	- do while -> Repetição com teste no final 
+	- for -> Repetição contada
+	- controle de repetição: break -> é utilizado para terminar de forma abrupta uma repetição, sair do loop.
+				 continue -> quando executado, os comandos retantes da repetição são ignorados,
+					     e o programa volta a testar novamente ou não de acordo com a expressão
+				             lógica.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+2 - Arrays na linguagem Java
+	- Arrays:
+		- é um obeto utilizado para armazenar sequencialmente dados do mesmo tipo.
+		- permanecem com o mesmo tamanho depois de criados.
+			
+	Tipos de Arrays:
+		- Array Unidimensional
+		- Array Multidimensional
+	
+-----------------------------------------------------------------------------------------------------------------------
+3 - Estrutura for-each
+	- Comando for-each
