@@ -1,6 +1,6 @@
 # pratica_java_dio
 
-Repositório criado para a prática/exercícios realizados no Bootcamp.
+Repositório criado para a prática/exercícios realizados no Bootcamp GFT Start #3 Java.
 
 Dentro deste repositório estão exercícios resolvidos e anotações de:
 
