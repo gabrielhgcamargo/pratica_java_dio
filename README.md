@@ -6,5 +6,5 @@ Dentro deste repositório estão exercícios resolvidos e anotações de:
 
 *  Entendendo Métodos Java
 *  Lógica Condicional e Controle de Fluxos em Java
-
 *  Estruturas de Repetição e Arrays em Java
+*  Programação Orientada a Objetos
