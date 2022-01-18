@@ -1,7 +1,7 @@
-package gabrielhgcamargo.github.io.Programacao_Orientada_A_Objetos;
+package gabrielhgcamargo.github.io.Programacao_Orientada_A_Objetos.Exercicios_Estrutura_Basica_POO;
 
 // Classe criada como exercício de Estrutura-Basica da OO
-public class Carro {
+public class Carro extends Veiculo {
 
     private String cor;
     private String modelo;
