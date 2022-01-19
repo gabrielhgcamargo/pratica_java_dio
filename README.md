@@ -13,3 +13,7 @@ Dentro deste repositório estão exercícios resolvidos e anotações de:
 ------------
 
 Disponibilizado por [Gabriel Camargo](https://www.linkedin.com/in/gabrielhgcamargo/ "Linkedin de Gabriel Camargo").
+
+[GitHub](https://github.com/gabrielhgcamargo "GitHub de Gabriel Camargo")
+
+Email para contato: gacamargos4@gmail.com
