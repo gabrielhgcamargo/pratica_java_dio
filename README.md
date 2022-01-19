@@ -12,6 +12,12 @@ Dentro deste repositório estão exercícios resolvidos e anotações de:
 
 ------------
 
+## 🛠️ Ferramentas utilizadas para o Aprendizado
+* [Java 11](https://dev.java/) - Linguagem utilizada.
+* [IntelliJ](https://www.jetbrains.com/pt-br/idea/) - Ambiente de Desenvolvimento utilizado.
+
+------------
+
 Disponibilizado por [Gabriel Camargo](https://www.linkedin.com/in/gabrielhgcamargo/ "Linkedin de Gabriel Camargo").
 
 [GitHub](https://github.com/gabrielhgcamargo "GitHub de Gabriel Camargo")
