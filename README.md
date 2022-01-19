@@ -8,3 +8,8 @@ Dentro deste repositório estão exercícios resolvidos e anotações de:
 *  Lógica Condicional e Controle de Fluxos em Java
 *  Estruturas de Repetição e Arrays em Java
 *  Programação Orientada a Objetos
+
+
+------------
+
+Disponibilizado por [Gabriel Camargo](https://www.linkedin.com/in/gabrielhgcamargo/ "Linkedin de Gabriel Camargo").
