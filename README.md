@@ -1,6 +1,6 @@
-# pratica_java_dio
+# Praticando Java com a DIO
 
-Repositório criado para a prática/exercícios realizados no Bootcamp GFT Start #3 Java.
+Repositório criado para a prática/exercícios de Java realizados no Bootcamp GFT Start #3 Java, na Digital Innovation One.
 
 Dentro deste repositório estão exercícios resolvidos e anotações de:
 
