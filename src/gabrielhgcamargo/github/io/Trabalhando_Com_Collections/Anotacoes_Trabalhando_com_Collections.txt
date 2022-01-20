@@ -1,0 +1,486 @@
+Collection 
+
+	- Collection é um objeto que agrupa múltiplos elementos (variáveis primitivas ou objetos)
+	    dentro de uma única unidade.
+
+	- Serve para armazenar e processar conjuntos de dados de forma eficiente.
+	
+	------------------------
+	
+	Composição da Collection
+	
+	- Interfaces: é um contrato que quando assumido por uma classe
+			deve ser implementado.
+	
+	- Implementações ou Classes: são as materializações, a 
+				      codificação das interfaces.
+
+	- Algoritmos: é a sequência lógica, finita e definida de instruções
+			que devem ser seguidas para resolver um problema.
+
+---------------------------------------------------------------------------------------------------------
+LIST
+
+A interface List fica dentro do pacote:
+			
+				java.util.List
+
+	Duas principais características:
+
+	- Permite elementos duplicados
+	- Garante a ordem de inserção
+
+
+-- Como criar uma lista:
+	
+	Vazia: List<Double> notas = new ArrayList<Double>();
+	
+	Com conteúdo: List<Double> notas = new ArrayList<Double>(Arrays.asList(7d, 8.5, 9.3)); // ITERÁVEL
+		      List<Double> notas = Arrays.asList(7d, 8.5, 9.3); // NESTA MANEIRA NAO SE PODE ADICIONAR NEM REMOVER ELEMENTOS
+
+			
+	 	      List<Double> notas = List.of(7d, 8.5, 9.3); // NESTA MANEIRA NAO SE PODE ADICIONAR NEM REMOVER ELEMENTOS
+
+
+
+-- Como adicionar elementos em uma lista:
+	(método mais convencional é o ADD.)
+
+	notas.add(7d);
+	notas.add(8.5);
+	notas.add(9.3);
+	
+-- Para adicionar elementos em uma posição específica:
+	
+	- Adicionar a nota 8.0 na posição 4
+	
+	notas.add(i:4, e: 8d);
+
+-- Para substituir um elemento específico por outro:
+
+	-Substituir a nota 7.0 por 6.0
+
+	notas.set(i: notas.indexOf(7d), 6.0);
+
+
+-- Para imprimir:
+
+	System.out.println(notas);
+	ou
+	System.out.println(notas.toString());
+
+
+-- Para imprimir um elemento em específico:
+
+	- Para exibir a posição da nota 8.5:	
+	
+		notas.indexOf(8.5);
+	
+	- Para exibir um elemento em específico (passando o índice):
+		
+		Índice 2
+		notas.get(2);
+
+
+-- Para confirmar se há um elemento na lista:
+
+	- Verificar se existe a nota 6.0 na lista
+
+	notas.contains(6d); 
+	
+-- Exibir as notas na ordem que foram informadas:
+
+	Listas mantém a ordem de inserção, então um sysout já funciona.
+	Pode ser feito também com forEach:
+
+	for (Double nota: notas) System.out.println(nota);
+	
+
+-- Exibir o maior elemento:
+
+	Collections.max(notas);
+
+-- Exibir o menor elemento:
+
+	Collections.min(notas);
+
+-- Exibir a soma dos elementos:
+
+	Double soma = 0d;
+	Iterator<Double> iterator = notas.iterator();
+	while(iterator.hasNext()){
+	Double next = iterator.next();
+	soma += next;
+}
+
+-- Exibir a média dos elementos:
+
+	soma/notas.size();
+
+-- Remover uma elemento em específico:
+	
+	Remover a nota 0
+	notas.remove(o: 0d);
+
+	Remover o elemento na posição 0
+	notas.remove(i: 0);
+
+-- Remover vários elementos com uma condição:
+
+	Iterator<Double> iterator1 = notas.iterator();
+	while(iterator1.hasNext()){
+	Double next = iterator.next();
+	if(next < 7) iterator.remove();
+	}
+
+
+-- Apagar uma lista inteira
+
+	notas.clear();
+
+
+-- Conferir se a lista está vazia:
+	Retorna um booleano:
+	
+	notas.isEmpty();
+
+
+-- Para embaralhar os elementos de uma lista:
+
+	Collections.shuffle(notas);
+
+---------------------------------------------------------------------------------------------------------
+
+SET
+
+java.util.Set
+
+- Não permite elementos duplicados.
+- Não possui índice.
+
+
+-- Como criar um Set
+
+	Set<Double> notas = new HashSet<Double>();
+	
+	Set<Double> notas = new HashSet<Double>(Arrays.asList(7d, 9.0, 8.5));
+
+
+-- Como adicionar elementos
+
+	Set.add(7d);
+	
+-- NÃO É POSSÍVEL ADICIONAR ELEMENTOS POR POSIÇÃO ESPECÍFICA
+
+-- NÃO É POSSÍVEL BUSCAR ELEMENTOS POR POSIÇÃO
+
+
+-- Como imprimit Sets
+
+	System.out.println(notas);
+	
+	System.out.println(notas.toString());
+
+
+-- Conferir se existe um elemento no Set
+
+	
+	notas.contains(9d);
+
+
+-- Exibir o menor elemento
+
+	Collections.min(notas);
+
+
+-- Exibir o maior elemento
+
+	Collections.max(notas);
+
+
+-- Exibir a soma dos elementos
+
+	Iterator<Double> iterator = notas.iterator();
+	Double soma = 0d;
+	while(iterator.hasNext()){
+	  Double next = iterator.next();
+	  soma += next;	
+	}
+
+
+-- Exibir a média dos elementos
+
+	soma / notas.size();
+
+
+
+-- Remover um elemento em específico
+
+	notas.remove(o:0d);
+
+
+-- Remover elementos que atendam uma condição
+
+	- Removendo notas menores que 7
+
+	Iterator<Double> iterator1 = notas.iterator();
+	Double soma = 0d;
+	while(iterator.hasNext()){
+	  Double next = iterator1.next();
+	  if(next < 7) iterator.remove();
+	}
+
+
+-- Exibir elementos na ordem de inserção ( usar linkedSet )
+
+	Set<Double> notas1 = new LinkedHashSet<Double>(Arrays.asList(7d, 9.0, 8.5));
+	
+	System.out.println(notas1);
+
+
+-- Exibir elementos na ordem crescente ( usar TreeSet)
+
+	Set<Double> notas2 = new TreeSet<Double>(Arrays.asList(7d, 9.0, 8.5));
+	
+	System.out.println(notas2);
+		
+	
+-- Apagar todo o Set
+
+	notas.clear();
+
+
+-- Verificar se está vazio
+
+	notas.isEmpty();
+
+---------------------------------------------------------------------------------------------------------
+
+MAP
+
+java.util.Map
+
+	- Elementos únicos (key) pra cada valor (key)
+
+	
+-- Como criar um Map
+
+	Map<String, Double> carrosPopulares = new HashMap<String, Double>(){{
+	  put("gol", 14.4);
+	  put("uno", 15.6);  
+ 	  put("mobi", 17.4);
+	  put("hb20", 10.1);
+	}}
+
+
+
+-- Imprimir um Map
+
+	Sytem.out.println(carrosPopulares);
+
+
+
+-- Substituir um valor de uma chave
+
+	- Substituir o consumo do gol por 15.5:
+
+	carrosPoulares.put(k:"gol", v:"15.5");
+
+
+-- Conferir se existe uma chave específica (devolve boolean)
+
+	- Conferir se existe o modelo Tucson
+
+	carrosPopulares.constainskey(o:"Tucson");
+
+
+-- Exibir o valor de uma chave
+
+	- Exibindo o valor de consumo da chave gol
+	
+	carrosPopulares.get("gol");
+
+
+-- Exibir todas as chaves
+
+	carrosPopulares.keySet();
+
+
+-- Exibir os valores
+
+	carrosPopulares.values();
+
+
+
+-- Exibir o menor valor
+
+	Collections.min(carrosPopulares.values());
+
+
+-- Exibir o maior valor
+
+	Collections.max(carrosPopulares.values());
+
+
+
+LINKEDHASHMAP -> ORDEM DE INSERÇÃO (valor)
+HASHMAP -> ORDEM ALEATORIA (valor)
+TREEMAP -> ORDEM DAS CHAVES (chave)
+
+
+
+
+carrosPopulares.entryset();
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+STREAM 
+
+O que são Streams API?
+
+	A Streams API traz uma nova opção para a manipulação de coleções em Java seguindo
+	os pricípios de programação funcional.
+	Combinada com expressões lambda, ela proporciona uma forma diferente de lidar com 
+	conjuntos de elementos, oferecendo ao desenvolvedor uma maneira simples e concisa
+	de escrever código que resulta em facilidade de manutenção e paralelização sem efeitos
+	indesejados em tempo de execução.
+
+
+JAVA STREAMS
+
+	1. Classe anônima
+	2. Functional Interface
+	3. Lambda
+	4. Reference Method
+	5. Stream API
+
+---
+1. Classe anônima
+
+	É uma classe que não recebeu um noma e é tanto declarada como instanciada numa
+	única instrução. Você deve considerar o uso de uma classe anônima sempre que você
+	precisa para criar uma classe que será instanciado apenas uma vez.
+	
+
+2. Functional Interface
+
+	Qualquer interface com um SAM (Single Abstract Method) é uma interface funcional
+	e sua implementação  pode ser tratada como expressões lamda.
+	
+	- Comparator
+	- Consumer
+	- Function
+	- Predicate
+	
+3. Lambda
+
+	Uma função lambda é uma função sem declaração, isto é, não é necessário colocar um nome,
+	um tipo de retorno e o modificador de acesso. A ideia é que o método seja declarado
+	no mesmo lugar em que será usado. As funções lambda em Java tem a sintax definida como 
+	(argumento) -> (corpo).
+
+	Simplificação de uma classe anônima.
+
+
+4. Reference Method
+
+	Novo recurso do java 8 que permite fazer referência a um método
+	ou construtor de uma classe (de forma funcional) e assim indicar
+	que ele deve ser utilizado num ponto específico do código, deixando-o
+	mais simples e legível. Para utilizá-lo  basta informar uma classe ou 
+	referência seguida do síbolo "::" e o nome do método sem o parênteses no final.
+
+	Basicamente é uma forma de simplificar um lambda.
+
+
+5. Stream API
+
+
+	Estrutura do Streaming:
+
+		SOURCE ->        PIPELINE ->      TERMINAL
+ 	        (fonte)          (operação)	  (operação)
+			       (intermediária)	    (final)
+
+
+
+--- Imprimir todos os elementos de uma lista se String:
+
+	- com Functional Interface
+	numerosAleatorios.stream().forEach(new Consumer<String>(){
+		@Override
+		public void accept(String s){
+			System.out.println(s);
+		}
+	});
+
+	- com lambda:
+		
+		numerosAleatorios.stream().forEach(s -> System.out.println(s));
+
+	- com Reference Method:
+		
+		numerosAleatorios.forEach(System.out::println);
+
+
+--- Colocar os 5 primeiros valores e colocar dentro de um Set:
+
+	numerosAleatorios.stream()
+		.limit(5)
+		.collect(Collector.toSet())
+		.forEach(System.out::println);
+
+
+
+-- Transformar  a listar de String em uma lista de números inteiros
+
+
+	numerosAleatorios.stream()
+		.map(Integer::parseInt)
+		.collect(Collector.toList());		
+
+
+
+-- Colocar os números pares maiores que 2 numa lista
+
+	- no exemplo abaixo, está considerando uma lista de numeros do tipo STRING,
+	  por isso é realizada a conversão (map).
+	
+	numerosAleatorios.stream() 
+		.map(Integer::parserInt)              // converte a lista de string para lista de inteiros
+		.filter(integer -> (integer %2 == 0 && integer > 2)) // verifica numeros pares e maiores que 2
+		.collect(Collector.toList()); // coloca dentro de uma lista
+
+	
+
+-- Mostrar a media dos números
+
+
+	numerosAleatorios.stream()
+		.mapToInt(Integer::parseInt)
+		.average()
+		.ifPresent(System.out::println);
+
+
+-- Remover os números ímpares 
+
+	numerosAleatoriosInteger.removeIf(i-> (i % 2 != 0));
+
+	// Streams não modificam. por isso nao foi utilizado o .stream().
+
+
+
+
+
+
+
+
+
+
+
+
+
+
