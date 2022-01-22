@@ -1,0 +1,220 @@
+Introdução ao HTTP/HTTPS
+
+
+Aula 1
+	1 - Protocolo HTTP
+	2 - Conceitos Básicos de Segurança
+	3 - Protocolo SSL
+
+Aula 2 
+	1 - Interface de Programação de Aplicações-API
+
+------------------------------------------------------------
+
+Aula 1.1 	Protocolo HTTP
+		      
+	Hypertext Transfer Protocol
+É um protocolo de comunicação, rege a estrutura as mensagens.
+
+- Arquitetura Client-Servidor
+- Stateless
+ 
+
+Do lado do cliente, o browser implementa o cliente HTTP.
+O Cliente envia Mensagens do tipo Request HTTP. Solicitando algum dado, ou enviando.
+o Cliente solicita os objetos WEB.
+
+Do lado do servidor, é onde estão hospedados os objetos webs.
+O servidor envia Mensagens do tipo Response HTTP.
+
+Essa comunicação é realizada atráves do protocolo TCP.
+Protocolo TCP - Protocolo na camada de transporte.
+		Opera de duas maneiras: - Conexão Persistente: uma vez que a conexão foi estabelecida, 
+							       será mantida até que seja feito um pedido
+								específico de finalização da sessão.
+					- Conexão Não Persistente: a cada envio de mensagens, a sessão é
+								   encerrada.
+
+Tipo de estrutura, tipo de arquitetura utilizado pelo Protocolo HTTP -> Arquitetura Client-Servidor.
+
+-----------------
+
+Mensagens HTTP
+
+	Request -> - realizada pelo cliente
+	   	  - https://prnt.sc/26gyp40
+	 	  - Entity Body: Campo da mensagem request HTTP. Não utilizada pelo GET, mas pelo método POST. 
+			
+		  - Métodos
+
+				GET - solicita um recurso do servidor
+				HEAD - GET sem corpo de resposta
+				POST - submete uma entidade a um recurso
+				PUT - substituição de recursos pelos dados da requisição
+				DELETE - remoção de um recurso do servidor
+				TRACE - chamada de loop-back a um determinado recurso
+				OPTION - opções de comunicação com o recurso
+				CONNECT - tunelamento identificado pelo recurso
+				PATCH - modificação parcial
+
+		Métodos seguros : GET, HEAD E OPTION.
+		São seguros pois eles não acarretam nenhuma alteração de estado, 
+		dos recursos do servidor.
+	--------------------------------------------------------------------------------------------------------------
+
+	Response -> designada pelo servidor
+		  - Status line : https://prnt.sc/26gyt98
+		  - Header line : https://prnt.sc/26gytn5	
+		
+		  - Status code
+					
+				200 OK:				- request bem sucedida e obejeto enviado
+				301 Moven Permanently 		- objeto realocado nova URL no campo Location
+		 		400 Bad Request			- reposta genérica - servidor não entendeu a mensagem
+				404 Not Found			- documento solicitado não existe
+				505 HTTP Version Not Supported	- versão do protocolo não suportada pelo servidor
+
+
+
+Exemplo de troca de mensagens (Cliente - Servidor)
+
+GET
+Cliente realiza um Get (Request HTTP)
+Servidor buscará o que o Cliente pediu
+Servidor envia uma mensagem do tipo Response.
+
+
+POST
+Cliente realiza um POST (Request HTTP), digamos que cadastrando algo,
+o método POST ele implica em o servidor aceitar todos os dados que estão anexados ao corpo de mensagem.
+ou seja, uma vez que estamos preenchendo os dados de uma entidade para realizar o POST, esses dados precisam
+estar contidos no método body.
+Assim sendo, o servidor irá ler a mensagem, atualizar o banco de dados e enviar uma mensagem do tipo Response.
+
+
+
+---------
+
+Cookies - RFC 6265
+	- Rastreamento
+	- Identificação : Restrição ou Fornecimento de funções.
+
+	Cookies - Componentes
+		
+	- Cookie header line: Response message, Request Message.
+	- Cookie file :  mantido no cliente e servidor, browser gerencia.
+	- Bando de Dados Back-End : WebSite.
+
+--------------------------------------------------------------------------------
+
+Aula 1.1 - Conceitos Básicos de Segurança
+
+Criptografia por Chave  
+
+Tipos:
+- Assimétrica	
+	- Chave Privada : Assinatura - Criptografia
+	- Chave Pública : verificação de autenticidade
+			   
+
+- Simétrica
+	- Chave única privada
+	
+
+Certificado Digital
+
+
+--------------------------------------------------------------------------------
+
+Aula 3.1 - Protocolo SSL 
+
+SSL ->  Secure Socket Layer
+
+Segurança pra conexões TCP
+
+- Confidencialidade
+- Integridade
+- Autenticidade end-point
+
+
+
+
+------------------------------------------------------------
+
+AULA 2
+
+O que é API? Application Programming Interface
+
+- Coleção de métodos disponibilizados por um serviço para interação indireta
+	(funções de um determinado serviço sem que precisamos entender o que está correndo por trás disso)
+
+- Analogia de um restaurante para o entendimento:
+	 Cliente <-> Garçom <-> Chefe
+	 
+Onde cliente em acesso ao menu, e escolhe um pedido.
+Garçom recebe o pedido do Cliente e envia ao Chefe de cozinha.
+Chefe de cozinha envia o pedido para o Garçom, que entrega ao Cliente.
+
+O Cliente só quer o pedido, e não quer saber como o pedido chega até ele e como.
+O Chefe só quer fazer o pedido, e não precisa saber quem pediu este pedido.
+Quem faz o intermédio é o Garçom, no caso, a API.	
+
+
+---
+
+	Propriedades da API
+	
+
+- Acesso de dados
+- Esconder complexidade
+- Estender funcionalidades
+- Segurança
+
+
+---
+
+Padrão REST - REpresentational State Transfer 
+
+é uma arquitetura e define algumas regras entre comunicação de API - Sistemas.
+
+é uma arquitetura que define um padrão de linguagem e com isso suas boas práticas e regras bem definidas
+	para a comunicação entre os sistemas.
+
+
+---
+	Vantagens da padronização:
+
+		- Maior compreensão
+		- Redução do esforço
+		- Ganho em agilidade 
+		- Eficiência
+		- Migração de sistemas
+		- Independência da aplicação
+
+
+PORQUE UTILIZAR APIs Restfull
+-> Padrão comumente adotado
+-> Conversa bem com o protocolo HTTP
+-> Permite criação de APIs mais eficientes
+-> Foco no desenvolvimento
+
+
+
+---------------------------------------------------
+API JAVA
+
+Pacote HTTP
+
+java.net.http --------> HttpClient -> Classe que define o HTTP -> .newHttpCliente(); e .newBuilder()
+   |	|
+   |    |-----> HttpRequest -> Classe de solicitações e utilização de métodos;
+   |----------> HttpResponse -> Resultado da solicitação HTTP;
+
+
+Exercicios de caso - github
+
+
+	
+
+
+
