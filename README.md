@@ -9,6 +9,7 @@ Dentro deste repositório estão exercícios resolvidos e anotações de:
 *  Estruturas de Repetição e Arrays em Java
 *  Programação Orientada a Objetos
 *  Tratamento de Exceções em Java
+*  Introdução ao HTTP-HTTPS
 
 
 ------------
